@@ -1,0 +1,142 @@
+'use client';
+//mounted is used to fix a server/client mismatch
+import React, { useEffect, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import useScroll from '@/lib/hooks/useScroll';
+import { brand, navLinks } from '@/constants/AppConstants';
+import DropdownMenu from '../interface/dropdown/navbarMenu';
+import { RiLoginBoxFill } from 'react-icons/ri';
+import CommonModal from '../interface/commonModal';
+import ThemeSwitch from '../interface/themeSwitch/ThemeSwitch';
+import Image from 'next/image';
+import PrimaryLogo from '../../../public/assets/logo-primary.png';
+import Dropdown from '../interface/dropdown/dropdown';
+import { Menu, MenuItem } from '@headlessui/react';
+
+type NavLink = {
+  name: string;
+  id: number;
+  value: string;
+  link: string;
+};
+
+const Navbar = () => {
+  const [mounted, setMounted] = useState(false);
+  const [user, setUser] = useState({ name: '' });
+  const [openModal, setOpenModal] = useState(false);
+
+  const scrolled = useScroll(50);
+  const router = useRouter();
+  const pathname = usePathname();
+  console.log('pathname', pathname);
+
+  const handleLogout = () => {
+    router.push('/');
+  };
+
+  const handleNavLinkClick = (link: string) => {
+    router.push(link);
+  };
+
+  return (
+    <div
+      className={`w-full flex justify-center sticky top-0 z-20 ${
+        scrolled
+          ? ' bg-white/70 dark:border-indigo-800 dark:bg-gray-900 backdrop-blur-xl'
+          : 'bg-white/0'
+      } transition-all duration-150`}
+    >
+      <div className='w-full max-w-8xl h-20 px-10 text-lg font-medium flex gap-4 items-center justify-between'>
+        <div className=''>
+          <div className='text-2xl font-bold text-brandLight dark:text-brandDark drop-shadow-md'>
+            <Link href={'/'}>{brand.name}</Link>
+            {/* <Image src={PrimaryLogo} width={200} height={40} alt='Business Interaspect' /> */}
+          </div>
+        </div>
+        <div className='hidden lg:flex gap-3 items-center'>
+          {navLinks.map((navLink, idx) => {
+            return (
+              <div key={idx}>
+                {!navLink.dropdown ? (
+                  <div
+                    className={`
+                capitalize text-lg  px-4 py-1 border-primary rounded-sm  hover:text-brandLight dark:hover:text-brandDark Light cursor-pointer`}
+                    onClick={() => {
+                      handleNavLinkClick(navLink.link);
+                    }}
+                  >
+                    {navLink.name}
+                  </div>
+                ) : (
+                  <Dropdown title={navLink.name}>
+                    <div className='flex flex-col gap-2 p-3 items-start'>
+                      {navLink.options?.map((option: any, idx: number) => {
+                        return (
+                          <div
+                            key={idx}
+                            className='hover:bg-brandLight dark:hover:bg-brandDark hover:text-white w-full px-2 py-1 rounded-medium transition-all duration-100 ease-in ease-out'
+                          >
+                            <MenuItem>
+                              <button
+                                onClick={() =>
+                                  handleNavLinkClick(
+                                    `${navLink.link}${option.link}`
+                                  )
+                                }
+                                className=''
+                              >
+                                {option.name}
+                              </button>
+                            </MenuItem>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </Dropdown>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <div className='hidden lg:flex justify-between w-40'>
+          <div className='w-1/2 px-3 py-1.5 flex justify-end'>
+            <ThemeSwitch />
+          </div>
+          <button
+            className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-white font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm'
+            onClick={() => {
+              setOpenModal(true);
+            }}
+          >
+            Sign in
+          </button>
+          <CommonModal
+            setIsOpen={setOpenModal}
+            isOpen={openModal}
+            subTitle=' Sign in using your email id.'
+            confirmBtnTitle='Sign In'
+            confirmBtnFunction={() => {
+              console.log('primary button clicked');
+            }}
+          >
+            <div>Sign In form in progress</div>
+          </CommonModal>
+        </div>
+        <div className='block lg:hidden'>
+          <DropdownMenu
+            menuOptions={[
+              ...navLinks,
+              {
+                name: 'Sign In',
+                func: () => setOpenModal(true),
+              },
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
