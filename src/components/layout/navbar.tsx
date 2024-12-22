@@ -5,13 +5,13 @@ import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
 import { brand, navLinks } from '@/constants/AppConstants';
-import DropdownMenu from '../interface/dropdown/navbarMenu';
+import DropdownMenu from '../interface/dropdown/NavbarMenu';
 import { RiLoginBoxFill } from 'react-icons/ri';
-import CommonModal from '../interface/commonModal';
+import CommonModal from '../interface/modal/CommonModal';
 import ThemeSwitch from '../interface/themeSwitch/ThemeSwitch';
 import Image from 'next/image';
 import PrimaryLogo from '../../../public/assets/logo-primary.png';
-import Dropdown from '../interface/dropdown/dropdown';
+import Dropdown from '../interface/dropdown/Dropdown';
 import { Menu, MenuItem } from '@headlessui/react';
 
 type NavLink = {
@@ -75,7 +75,7 @@ const Navbar = () => {
                         return (
                           <div
                             key={idx}
-                            className='hover:bg-brandLight dark:hover:bg-brandDark hover:text-white w-full px-2 py-1 rounded-medium transition-all duration-100 ease-in ease-out'
+                            className='hover:bg-brandLight dark:hover:bg-brandDark hover:text-white w-full px-2 py-1 rounded-medium transition-all duration-100 ease-in ease-out drop-shadow-sm'
                           >
                             <MenuItem>
                               <button
@@ -104,7 +104,7 @@ const Navbar = () => {
             <ThemeSwitch />
           </div>
           <button
-            className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-white font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm'
+            className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-brandLight dark:hover:text-brandDark font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm'
             onClick={() => {
               setOpenModal(true);
             }}
