@@ -5,3 +5,5 @@ export const BannerConst = {
   description:
     'We provide you with top talents for your Web, Mobile, and Custom Software development ensuring scalable software solutions at affordable rates',
 };
+
+export const HighLightedWords = ['skilled', 'build', '$40']

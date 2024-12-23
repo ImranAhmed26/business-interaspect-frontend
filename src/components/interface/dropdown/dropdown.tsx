@@ -28,7 +28,7 @@ const Dropdown = ({ children, title = 'menu' }: Children) => {
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-          <MenuItems className=' absolute top-16 min-w-24 rounded-large bg-white shadow-lg focus:outline-none text-gray-700 '>
+          <MenuItems className=' absolute top-16 min-w-24 max-w-md rounded-3xl bg-white dark:bg-gray-900 shadow-lg focus:outline-none text-gray-700 dark:text-gray-200'>
             <div className='px-1 py-1 '>{children}</div>
           </MenuItems>
         </Transition>

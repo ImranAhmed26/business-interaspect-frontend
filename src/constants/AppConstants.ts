@@ -16,22 +16,32 @@ export const navLinks = [
       {
         name: 'Web Application',
         link: '/web',
+        details:
+          'E-commerce, Saas, CRM, ERP, Ed-Tech. Build scalable, user-friendly web applications with cutting-edge technologies tailored to your business needs.',
       },
       {
-        name: 'IOS & Android Application',
+        name: 'Mobile App Development',
         link: '/app',
+        details:
+          'Create seamless mobile experiences with custom apps designed for iOS and Android platforms, ensuring broad reach and engagement.',
       },
       {
         name: 'Cloud Services',
         link: '/cloud',
+        details:
+          'Cloud solutions designed for flexibility, cost-efficiency, and scalability, with a focus on data security and performance.',
       },
       {
         name: 'Website Design',
         link: '/design',
+        details:
+          'Visually stunning, responsive websites built to enhance your brand’s online presence and user engagement.',
       },
       {
         name: 'Ongoing Support',
         link: '/support',
+        details:
+          'Get continuous assistance and maintenance to ensure your applications run smoothly and remain up-to-date with evolving needs.',
       },
     ],
   },

@@ -1,7 +1,7 @@
 'use client';
 import React, { ReactElement } from 'react';
 import { Menu } from '@headlessui/react';
-import Dropdown from './Dropdown';
+import Dropdown from './DropdownMenu';
 import { useRouter } from 'next/navigation';
 
 type MenuOptions = {

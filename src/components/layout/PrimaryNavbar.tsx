@@ -21,7 +21,7 @@ type NavLink = {
   link: string;
 };
 
-const Navbar = () => {
+const PrimaryNavbar = () => {
   const [mounted, setMounted] = useState(false);
   const [user, setUser] = useState({ name: '' });
   const [openModal, setOpenModal] = useState(false);
@@ -70,12 +70,12 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Dropdown title={navLink.name}>
-                    <div className='flex flex-col gap-2 p-3 items-start'>
+                    <div className='flex flex-col gap-2 p-0.5 items-start'>
                       {navLink.options?.map((option: any, idx: number) => {
                         return (
                           <div
                             key={idx}
-                            className='hover:bg-brandLight dark:hover:bg-brandDark hover:text-white w-full px-2 py-1 rounded-medium transition-all duration-100 ease-in ease-out drop-shadow-sm'
+                            className='group dark:hover:bg-gray-800 hover:bg-gray-100 hover:text-brandLight dark:hover:text-brandDark text-left w-full p-1.5 rounded-2xl transition-all duration-100 ease-in ease-out'
                           >
                             <MenuItem>
                               <button
@@ -84,9 +84,12 @@ const Navbar = () => {
                                     `${navLink.link}${option.link}`
                                   )
                                 }
-                                className=''
+                                className='text-left'
                               >
-                                {option.name}
+                                <div>{option.name}</div>
+                                <div className='text-sm text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white '>
+                                  {option.details}
+                                </div>
                               </button>
                             </MenuItem>
                           </div>
@@ -139,4 +142,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default PrimaryNavbar;
