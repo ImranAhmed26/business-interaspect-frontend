@@ -97,12 +97,12 @@ const PrimaryNavbar = () => {
             );
           })}
         </div>
-        <div className='hidden lg:flex justify-between w-40'>
-          <div className='w-1/2 px-3 py-1.5 flex justify-end'>
+        <div className=' justify-between lg:w-40'>
+          <div className='w-1/2 lg:px-3 py-1.5 lg:flex justify-end'>
             <ThemeSwitch />
           </div>
           <button
-            className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-brandLight dark:hover:text-brandDark font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm'
+            className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-brandLight dark:hover:text-brandDark font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm hidden lg:flex'
             onClick={() => {
               setOpenModal(true);
             }}
@@ -121,7 +121,7 @@ const PrimaryNavbar = () => {
             <div>Sign In form in progress</div>
           </CommonModal>
         </div>
-        <div className='block lg:hidden'>
+        {/* <div className='block lg:hidden'>
           <DropdownMenu
             menuOptions={[
               ...navLinks,
@@ -131,7 +131,7 @@ const PrimaryNavbar = () => {
               },
             ]}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
