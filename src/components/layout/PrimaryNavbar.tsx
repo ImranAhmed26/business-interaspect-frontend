@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
 import { brand, navLinks } from '@/constants/AppConstants';
-import DropdownMenu from '../interface/dropdown/NavMenu';
+// import DropdownMenu from '../interface/dropdown/NavMenu';
 import CommonModal from '../interface/modal/CommonModal';
 import ThemeSwitch from '../interface/customFeature/ThemeSwitch';
 import Dropdown from '../interface/dropdown/DropdownItem';
