@@ -5,7 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from '@/components/shared/Utils';
 import { highlightWords } from './Utils';
-import H4 from '@/components/interface/typhography/H4';
+import H4 from '@/components/interface/typography/H4';
 import ActionButton from '@/components/interface/button/ActionButton';
 import AltButton from '@/components/interface/button/AltButton';
 
@@ -14,7 +14,7 @@ const Banner = () => {
 
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full h-[80vh]'
+      className='flex flex-col items-center gap-4 w-full h-[74vh]'
       variants={containerVariants}
       initial='hidden'
       animate='visible'
@@ -44,7 +44,7 @@ const Banner = () => {
         <AltButton title='Learn more' func={handleStartBuilding} />
       </motion.div>
       <motion.div>
-        <div className='pt-20 dark:text-indigo-200'>
+        <div className='pt-20 '>
           <H4 para={BannerConst.description} />
         </div>
       </motion.div>

@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { itemVariants } from '@/components/shared/Utils';
 
-const H4 = ({ para }: { para: string }) => {
+const H3 = ({ para }: { para: string }) => {
   return (
     <motion.h4
-      className='text-xl font-base mx-auto text-center max-w-5xl sm:text-2xl'
+      className='text-xl font-medium sm:font-normal sm:text-3xl text-center max-w-5xl font-base mx-auto '
       variants={itemVariants}
     >
       {para}
@@ -13,4 +13,4 @@ const H4 = ({ para }: { para: string }) => {
   );
 };
 
-export default H4;
+export default H3;

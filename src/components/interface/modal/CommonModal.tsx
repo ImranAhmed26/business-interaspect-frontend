@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
 type Modal = {
   title?: string;
@@ -25,9 +25,9 @@ export default function CommonModal({
     setIsOpen(false);
   }
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  // function openModal() {
+  //   setIsOpen(true);
+  // }
 
   return (
     <>

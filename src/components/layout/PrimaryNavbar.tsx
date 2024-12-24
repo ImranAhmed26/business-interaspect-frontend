@@ -1,29 +1,24 @@
 'use client';
 //mounted is used to fix a server/client mismatch
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
 import { brand, navLinks } from '@/constants/AppConstants';
 import DropdownMenu from '../interface/dropdown/NavbarMenu';
-import { RiLoginBoxFill } from 'react-icons/ri';
 import CommonModal from '../interface/modal/CommonModal';
-import ThemeSwitch from '../interface/themeSwitch/ThemeSwitch';
-import Image from 'next/image';
-import PrimaryLogo from '../../../public/assets/logo-primary.png';
+import ThemeSwitch from '../interface/customFeature/ThemeSwitch';
 import Dropdown from '../interface/dropdown/Dropdown';
-import { Menu, MenuItem } from '@headlessui/react';
+import { MenuItem } from '@headlessui/react';
 
-type NavLink = {
-  name: string;
-  id: number;
-  value: string;
-  link: string;
-};
+// type NavLink = {
+//   name: string;
+//   id: number;
+//   value: string;
+//   link: string;
+// };
 
 const PrimaryNavbar = () => {
-  const [mounted, setMounted] = useState(false);
-  const [user, setUser] = useState({ name: '' });
   const [openModal, setOpenModal] = useState(false);
 
   const scrolled = useScroll(50);
@@ -31,9 +26,9 @@ const PrimaryNavbar = () => {
   const pathname = usePathname();
   console.log('pathname', pathname);
 
-  const handleLogout = () => {
-    router.push('/');
-  };
+  // const handleLogout = () => {
+  //   router.push('/');
+  // };
 
   const handleNavLinkClick = (link: string) => {
     router.push(link);
@@ -43,7 +38,7 @@ const PrimaryNavbar = () => {
     <div
       className={`w-full flex justify-center sticky top-0 z-20 ${
         scrolled
-          ? ' bg-white/70 dark:border-indigo-800 dark:bg-gray-900 backdrop-blur-xl'
+          ? ' bg-white/70  dark:bg-gray-900/70 backdrop-blur-xl'
           : 'bg-white/0'
       } transition-all duration-150`}
     >
