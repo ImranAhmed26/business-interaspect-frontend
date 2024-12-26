@@ -1,23 +1,23 @@
 //FRAMER MOTION STYLES
-export const containerVariants = {
+export const containerVariants = (staggerChildren: number = 0.2) => ({
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren,
     },
   },
-};
+});
 
-export const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+export const itemVariants = (duration: number = 0.5, yOffset: number = 20) => ({
+  hidden: { opacity: 0, y: yOffset },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration,
     },
   },
-};
+});
 
-// 
+//

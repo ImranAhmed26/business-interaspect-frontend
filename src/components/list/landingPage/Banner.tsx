@@ -15,30 +15,30 @@ const Banner = () => {
   return (
     <motion.div
       className='flex flex-col items-center gap-4 w-full h-[74vh]'
-      variants={containerVariants}
+      variants={containerVariants()}
       initial='hidden'
       animate='visible'
     >
       <motion.div
         className='space-y-5 max-w-4xl mx-auto text-center'
-        variants={itemVariants}
+        variants={itemVariants()}
       >
         <motion.h1
           className='text-3xl font-extrabold mx-auto sm:text-6xl'
-          variants={itemVariants}
+          variants={itemVariants()}
         >
           {highlightWords(BannerConst.title, HighLightedWords)}
         </motion.h1>
         <motion.p
           className='max-w-2xl font-extralight text-xl sm:text-2xl text-brandLight dark:text-brandDark mx-auto'
-          variants={itemVariants}
+          variants={itemVariants()}
         >
           {BannerConst.subTitle}
         </motion.p>
       </motion.div>
       <motion.div
         className='flex items-center justify-center gap-4 pt-10'
-        variants={itemVariants}
+        variants={itemVariants()}
       >
         <ActionButton title='Start building' func={handleStartBuilding} />
         <AltButton title='Learn more' func={handleStartBuilding} />
