@@ -6,9 +6,9 @@ import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
 import { brand, navLinks } from '@/constants/AppConstants';
 // import DropdownMenu from '../interface/dropdown/NavMenu';
-import CommonModal from '../Interface/modal/CommonModal';
-import ThemeSwitch from '../Interface/CustomFeature/ThemeSwitch';
-import Dropdown from '../Interface/Dropdown/Dropdown';
+import CommonModal from '../UI/modal/CommonModal';
+import ThemeSwitch from '../UI/CustomFeature/ThemeSwitch';
+import Dropdown from '../UI/Dropdown/Dropdown';
 import { MenuItem } from '@headlessui/react';
 
 // type NavLink = {

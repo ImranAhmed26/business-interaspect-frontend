@@ -7,10 +7,10 @@ import {
   containerVariants,
   itemVariants,
 } from '@/components/Shared/FramerConsts';
-import { HighlightWords } from '../../Interface/CustomFeature/HighlightedWords';
-import H4 from '@/components/Interface/Typography/H4';
-import ActionButton from '@/components/Interface/Button/ActionButton';
-import AltButton from '@/components/Interface/Button/AltButton';
+import { HighlightWords } from '../../UI/CustomFeature/HighlightedWords';
+import H4 from '@/components/UI/Typography/H4';
+import ActionButton from '@/components/UI/Button/ActionButton';
+import AltButton from '@/components/UI/Button/AltButton';
 
 const Banner = () => {
   const handleStartBuilding = () => {};

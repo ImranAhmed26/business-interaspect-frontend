@@ -9,7 +9,7 @@ import Image from 'next/image';
 import PartnershipLight from '../../../../public/assets/partnership-light.png';
 import PartnershipDark from '../../../../public/assets/partnership-dark.png';
 import { useTheme } from 'next-themes';
-import H3 from '@/components/Interface/Typography/H3';
+import H3 from '@/components/UI/Typography/H3';
 import { BannerConst, WorkWithUsPoints } from '@/constants/landingPage';
 
 const WorkWithUs = () => {
