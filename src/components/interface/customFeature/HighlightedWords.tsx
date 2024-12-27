@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export const highlightWords = (text: string, wordsToHighlight: string[]) => {
+export const HighlightWords = (text: string, wordsToHighlight: string[]) => {
   const regex = new RegExp(
     `(${wordsToHighlight
       .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))

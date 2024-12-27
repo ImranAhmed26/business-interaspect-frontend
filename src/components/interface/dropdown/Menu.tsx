@@ -9,7 +9,7 @@ type Children = {
   title?: string;
 };
 
-const Dropdown = ({ children, title = 'menu' }: Children) => {
+const DropdownMenu = ({ children, title = 'menu' }: Children) => {
   return (
     <div className='py-1'>
       <Menu
@@ -48,4 +48,4 @@ const Dropdown = ({ children, title = 'menu' }: Children) => {
   );
 };
 
-export default Dropdown;
+export default DropdownMenu;

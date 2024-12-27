@@ -1,7 +1,7 @@
 'use client';
 import React, { ReactElement } from 'react';
 import { Menu } from '@headlessui/react';
-import Dropdown from './DropdownMenu';
+import DropdownMenu from './Menu';
 import { useRouter } from 'next/navigation';
 
 type MenuOptions = {
@@ -9,11 +9,11 @@ type MenuOptions = {
   icon?: ReactElement;
 } & ({ func: () => void; link?: never } | { link: string; func?: never });
 
-const DropdownMenu = ({ menuOptions }: { menuOptions: MenuOptions[] }) => {
+const NavbarMenu = ({ menuOptions }: { menuOptions: MenuOptions[] }) => {
   const router = useRouter();
 
   return (
-    <Dropdown>
+    <DropdownMenu>
       {menuOptions.map((option: MenuOptions, idx: number) => {
         return (
           <Menu.Item key={idx}>
@@ -36,8 +36,8 @@ const DropdownMenu = ({ menuOptions }: { menuOptions: MenuOptions[] }) => {
           </Menu.Item>
         );
       })}
-    </Dropdown>
+    </DropdownMenu>
   );
 };
 
-export default DropdownMenu;
+export default NavbarMenu;

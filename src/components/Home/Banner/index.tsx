@@ -1,20 +1,23 @@
 'use client';
 
-import { BannerConst, HighLightedWords } from '@/constants/landingPage';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { containerVariants, itemVariants } from '@/components/shared/Utils';
-import { highlightWords } from './Utils';
-import H4 from '@/components/interface/typography/H4';
-import ActionButton from '@/components/interface/button/ActionButton';
-import AltButton from '@/components/interface/button/AltButton';
+import { BannerConst, HighLightedWords } from '@/constants/landingPage';
+import {
+  containerVariants,
+  itemVariants,
+} from '@/components/Shared/FramerConsts';
+import { HighlightWords } from '../../Interface/CustomFeature/HighlightedWords';
+import H4 from '@/components/Interface/Typography/H4';
+import ActionButton from '@/components/Interface/Button/ActionButton';
+import AltButton from '@/components/Interface/Button/AltButton';
 
 const Banner = () => {
   const handleStartBuilding = () => {};
 
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full h-[74vh]'
+      className='flex flex-col items-center gap-4 w-full h-[80vh]'
       variants={containerVariants()}
       initial='hidden'
       animate='visible'
@@ -27,7 +30,7 @@ const Banner = () => {
           className='text-3xl font-extrabold mx-auto sm:text-6xl'
           variants={itemVariants()}
         >
-          {highlightWords(BannerConst.title, HighLightedWords)}
+          {HighlightWords(BannerConst.title, HighLightedWords)}
         </motion.h1>
         <motion.p
           className='max-w-2xl font-extralight text-xl sm:text-2xl text-brandLight dark:text-brandDark mx-auto'

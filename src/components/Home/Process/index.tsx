@@ -1,14 +1,17 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { containerVariants, itemVariants } from '@/components/shared/Utils';
+import {
+  containerVariants,
+  itemVariants,
+} from '@/components/Shared/FramerConsts';
 import Image from 'next/image';
 import PartnershipLight from '../../../../public/assets/partnership-light.png';
 import PartnershipDark from '../../../../public/assets/partnership-dark.png';
 import { useTheme } from 'next-themes';
-import H3 from '@/components/interface/typography/H3';
+import H3 from '@/components/Interface/Typography/H3';
 import { BannerConst, WorkWithUsPoints } from '@/constants/landingPage';
-import H4 from '@/components/interface/typography/H4';
+import H4 from '@/components/Interface/Typography/H4';
 
 const WorkWithUs = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,7 +22,7 @@ const WorkWithUs = () => {
   if (!mounted) return <div>[]</div>;
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full pt-24 lg:pt-0 z-10 '
+      className='flex flex-col items-center gap-4 w-full pt-24 lg:pt-0 z-10'
       variants={containerVariants(0.2)} // Stagger children with a smooth delay
       initial='hidden'
       whileInView='visible'

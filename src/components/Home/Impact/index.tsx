@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 import { useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
-import StackedCards from '@/components/interface/customFeature/StackedCards';
+import StackedCards from '@/components/Home/Impact/StackedCards';
 import { StackedCardConst } from '@/constants/landingPage';
 
 export default function Projects() {

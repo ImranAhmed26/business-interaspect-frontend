@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { itemVariants } from '@/components/shared/Utils';
+import { itemVariants } from '@/components/Shared/FramerConsts';
 
 const H4 = ({ para }: { para: string }) => {
   return (

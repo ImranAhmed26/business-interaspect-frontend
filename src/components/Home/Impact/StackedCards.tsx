@@ -2,9 +2,6 @@
 import Image, { StaticImageData } from 'next/image';
 import { useTransform, motion, useScroll, MotionValue } from 'framer-motion';
 import { useRef } from 'react';
-import DummyImage from '../../../../public/assets/dummy.jpg';
-import H4 from '../typography/H4';
-import H3 from '../typography/H3';
 
 type StackCard = {
   i: number;
@@ -43,17 +40,17 @@ const StackedCards = ({
   return (
     <div
       ref={container}
-      className='h-screen flex items-center justify-center sticky top-20 '
+      className='h-screen  flex items-center justify-center sticky top-10 bg-red-10 2xl:px-20 max-w-screen-2xl '
     >
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 55}px)`,
         }}
-        className='bg-gray-300/40  dark:bg-gray-900/70 backdrop-blur-2xl flex flex-col relative -top-[25%] h-[70dvh] w-full rounded-3xl p-12 transform-origin-top'
+        className='bg-gray-300/40  dark:bg-gray-900/70 backdrop-blur-2xl flex flex-col relative -top-[25%] h-[70dvh] rounded-3xl p-12 transform-origin-top'
       >
         <div className='flex h-full mt-2 gap-12'>
-          <div className='flex flex-col justify-center gap-4 relative w-2/4 bg-lime-20'>
+          <div className='flex flex-col justify-center gap-4 relative w-2/4 bg-lime-20 '>
             <h2 className='text-center  text-5xl 2xl:text-6xl font-extrabold m-0'>
               {title}
             </h2>
@@ -61,15 +58,6 @@ const StackedCards = ({
               {subTitle}
             </h3>
             <p className='text-xl text-center'>{description}</p>
-            {/* <span className='flex items-center gap-1'>
-              <a
-                href={url}
-                target='_blank'
-                className='text-[12px] underline cursor-pointer'
-              >
-                See more
-              </a>
-            </span> */}
           </div>
           <div className='flex justify-center items-start relative w-2/4 h-full rounded-2xl overflow-hidden pt-0 bg-sky-20'>
             <motion.div
