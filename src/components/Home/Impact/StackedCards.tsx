@@ -9,8 +9,6 @@ type StackCard = {
   subTitle: string;
   description: string;
   src: StaticImageData;
-  url: string;
-  color: string;
   progress: MotionValue<number>;
   range: number[];
   targetScale: number;
@@ -21,8 +19,6 @@ const StackedCards = ({
   title,
   description,
   src,
-  url,
-  color,
   subTitle,
   progress,
   range,

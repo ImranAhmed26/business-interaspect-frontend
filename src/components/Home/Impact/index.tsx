@@ -1,12 +1,11 @@
 'use client';
-import styles from './page.module.scss';
 import { useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import StackedCards from '@/components/Home/Impact/StackedCards';
 import { StackedCardConst } from '@/constants/landingPage';
 
-export default function Projects() {
+export default function Impact() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -25,13 +24,13 @@ export default function Projects() {
 
   return (
     <main ref={container} className='relative mt-[1vh] w-full'>
-      {StackedCardConst.map((project, i) => {
+      {StackedCardConst.map((cardItem, i) => {
         const targetScale = 1 - (StackedCardConst.length - i) * 0.05;
         return (
           <StackedCards
             key={`p_${i}`}
             i={i}
-            {...project}
+            {...cardItem}
             progress={scrollYProgress}
             range={[i * 0.5, 1]}
             targetScale={targetScale}

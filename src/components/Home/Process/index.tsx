@@ -11,7 +11,6 @@ import PartnershipDark from '../../../../public/assets/partnership-dark.png';
 import { useTheme } from 'next-themes';
 import H3 from '@/components/Interface/Typography/H3';
 import { BannerConst, WorkWithUsPoints } from '@/constants/landingPage';
-import H4 from '@/components/Interface/Typography/H4';
 
 const WorkWithUs = () => {
   const [mounted, setMounted] = useState(false);
