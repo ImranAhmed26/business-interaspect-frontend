@@ -7,6 +7,9 @@ import { BsCalendar2EventFill } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
 import { MdOutlineGrade } from 'react-icons/md';
 import { BsCalendar2Event } from 'react-icons/bs';
+import ReadingNewspaper from '../../public/assets/reading-newspaper.png';
+import DataAnalyst from '../../public/assets/data-analyst.png';
+import CodeTyping from '../../public/assets/code-typing.png';
 
 export const BannerConst = {
   title:
@@ -58,43 +61,32 @@ export const WorkWithUsPoints = [
 
 export const StackedCardConst = [
   {
-    title: 'Matthias Leidinger',
+    title: 'Focus 100% on Growing Your Business',
+    subTitle: 'Leave the tech to us.',
     description:
-      'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-    src: 'rock.jpg',
-    url: 'https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/',
+      'We handle all the technical complexities, giving you more time to focus on your business’s growth and success.',
+    src: ReadingNewspaper,
+    url: '',
     color: '#BBACAF',
   },
   {
-    title: 'Clément Chapillon',
+    title: 'Custom Solutions to Bring Your Vision to Life',
+    subTitle: 'Expertise that delivers results.',
     description:
-      'This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).',
-    src: 'tree.jpg',
-    url: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
-    color: '#977F6D',
+      'We turn your ideas from concept to reality using cutting-edge solutions designed to solve your challenges and achieve your unique goals.',
+    src: DataAnalyst,
+    url: 'https://example.com/your-vision',
+    color: '#D4A5A6',
   },
   {
-    title: 'Zissou',
+    title: 'Modern tech that empowers and scales seamlessly',
+    subTitle: 'Innovation that scales',
+    //description:
+    // 'We empower your business using top of the line technologies like React, Node JS, C#, Django and AWS that support you in the long term and scale rapidly as your business grows with time',
     description:
-      'Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.',
-    src: 'water.jpg',
-    url: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
-    color: '#C2491D',
+      'Harness the power of modern technologies to scale your business efficiently and stay ahead in a competitive market.',
+    src: CodeTyping,
+    url: 'https://example.com/tech-that-empowers',
+    color: '#C8D6A5',
   },
-  // {
-  //   title: 'Mathias Svold and Ulrik Hasemann',
-  //   description:
-  //     'The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.',
-  //   src: 'house.jpg',
-  //   url: 'https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/',
-  //   color: '#B62429',
-  // },
-  // {
-  //   title: 'Mark Rammers',
-  //   description:
-  //     'Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.',
-  //   src: 'cactus.jpg',
-  //   url: 'https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/',
-  //   color: '#88A28D',
-  // },
 ];

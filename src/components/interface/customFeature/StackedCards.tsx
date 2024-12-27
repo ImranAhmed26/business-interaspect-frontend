@@ -1,13 +1,17 @@
 'use client';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useTransform, motion, useScroll, MotionValue } from 'framer-motion';
 import { useRef } from 'react';
+import DummyImage from '../../../../public/assets/dummy.jpg';
+import H4 from '../typography/H4';
+import H3 from '../typography/H3';
 
 type StackCard = {
   i: number;
   title: string;
+  subTitle: string;
   description: string;
-  src: string;
+  src: StaticImageData;
   url: string;
   color: string;
   progress: MotionValue<number>;
@@ -22,6 +26,7 @@ const StackedCards = ({
   src,
   url,
   color,
+  subTitle,
   progress,
   range,
   targetScale,
@@ -42,19 +47,21 @@ const StackedCards = ({
     >
       <motion.div
         style={{
-          backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 55}px)`,
         }}
-        className='flex flex-col relative -top-[25%] h-[600px] w-full rounded-3xl p-12 transform-origin-top'
+        className='bg-gray-300/40  dark:bg-gray-900/70 backdrop-blur-2xl flex flex-col relative -top-[25%] h-[70dvh] w-full rounded-3xl p-12 transform-origin-top'
       >
-        <h2 className='text-center m-0 text-[28px]'>{title}</h2>
-        <div className='flex h-full mt-12 gap-12'>
-          <div className='relative top-[10%] w-2/5'>
-            <p className='text-[16px] first-letter:text-[28px] first-letter:font-title'>
-              {description}
-            </p>
-            <span className='flex items-center gap-1'>
+        <div className='flex h-full mt-2 gap-12'>
+          <div className='flex flex-col justify-center gap-4 relative w-2/4 bg-lime-20'>
+            <h2 className='text-center  text-5xl 2xl:text-6xl font-extrabold m-0'>
+              {title}
+            </h2>
+            <h3 className='text-3xl text-brandLight font-medium text-center'>
+              {subTitle}
+            </h3>
+            <p className='text-xl text-center'>{description}</p>
+            {/* <span className='flex items-center gap-1'>
               <a
                 href={url}
                 target='_blank'
@@ -62,11 +69,16 @@ const StackedCards = ({
               >
                 See more
               </a>
-            </span>
+            </span> */}
           </div>
-          <div className='relative w-3/5 h-full rounded-2xl overflow-hidden'>
-            <motion.div className='w-full h-full' style={{ scale: imageScale }}>
-              <Image fill src={`/images/${src}`} alt='image' />
+          <div className='flex justify-center items-start relative w-2/4 h-full rounded-2xl overflow-hidden pt-0 bg-sky-20'>
+            <motion.div
+              className='flex justify-center items-center h-[90%] bg-rose-20 pt-10'
+              style={{ scale: imageScale }}
+            >
+              <div className='w-[79%] bg-rose-30'>
+                <Image src={src} alt='image' className='object-contai' />
+              </div>
             </motion.div>
           </div>
         </div>
