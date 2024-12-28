@@ -10,8 +10,18 @@ import { BsCalendar2Event } from 'react-icons/bs';
 import ReadingNewspaper from '../../public/assets/reading-newspaper.png';
 import DataAnalyst from '../../public/assets/data-analyst.png';
 import CodeTyping from '../../public/assets/code-typing.png';
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPalette,
+  FaCloud,
+  FaLifeRing,
+  FaRocket,
+} from 'react-icons/fa';
 
-export const BannerConst = {
+import { Service } from '@/types/serviceItem';
+
+export const BannerData = {
   title:
     'Build your website with skilled engineers starting at just $40 per hour!',
   subTitle: 'Skilled Developers • Transparent Pricing • Exceptional Results',
@@ -23,7 +33,7 @@ export const BannerConst = {
 
 export const HighLightedWords = ['skilled', 'build', '$40'];
 
-export const WorkWithUsPoints = [
+export const WorkWithUsData = [
   {
     text: 'Tell us about your needs and big idea',
     iconLight: <FaLightbulb />,
@@ -51,15 +61,7 @@ export const WorkWithUsPoints = [
   },
 ];
 
-// export const StackedCardConst = [
-//   { name: 'Slide 1', color: ' bg-amber-400 ', desc: '' },
-//   { name: 'Slide 2', color: ' bg-sky-400 ', desc: '' },
-//   { name: 'Slide 3', color: 'bg-green-400', desc: '' },
-//   { name: 'Slide 4', color: 'bg-indigo-400', desc: '' },
-//   { name: 'Slide 5', color: 'bg-rose-400', desc: '' },
-// ];
-
-export const StackedCardConst = [
+export const ImpactData = [
   {
     title: 'Focus 100% on Growing Your Business',
     subTitle: 'Leave the tech to us.',
@@ -81,12 +83,57 @@ export const StackedCardConst = [
   {
     title: 'Modern tech that empowers and scales seamlessly',
     subTitle: 'Innovation that scales',
-    //description:
-    // 'We empower your business using top of the line technologies like React, Node JS, C#, Django and AWS that support you in the long term and scale rapidly as your business grows with time',
     description:
-      'Harness the power of modern technologies to scale your business efficiently and stay ahead in a competitive market.',
+      'We use cutting-edge technologies and programming languages that not only support your long-term goals but also scale rapidly as your business grows, ensuring you stay ahead in a competitive market',
     src: CodeTyping,
     url: 'https://example.com/tech-that-empowers',
     color: '#C8D6A5',
   },
 ];
+
+const featuresData: Service[] = [
+  {
+    id: 1,
+    title: 'Web Development',
+    description:
+      'E-commerce, Saas, CRM, ERP, Ed-Tech. Build scalable, user-friendly web applications with cutting-edge technologies tailored to your business needs.',
+    icon: <FaLaptopCode />,
+  },
+  {
+    id: 2,
+    title: 'Landing Pages & Personal Websites',
+    description:
+      'Craft custom landing pages and personal websites designed to captivate audiences, highlight your brand, and drive conversions with modern design and responsiveness.',
+    icon: <FaRocket />,
+  },
+  {
+    id: 3,
+    title: 'Mobile Application',
+    description:
+      'Create seamless mobile experiences with custom apps designed for iOS and Android platforms, ensuring broad reach and engagement.',
+    icon: <FaMobileAlt />,
+  },
+  {
+    id: 4,
+    title: 'UI/UX Design',
+    description:
+      'Visually stunning, responsive websites designed with attention to detail to enhance your brand’s online presence and user engagement.',
+    icon: <FaPalette />,
+  },
+  {
+    id: 5,
+    title: 'Cloud Services',
+    description:
+      'Cloud solutions designed for flexibility, cost-efficiency, and scalability, with a focus on data security and performance.',
+    icon: <FaCloud />,
+  },
+  {
+    id: 6,
+    title: 'Ongoing Support',
+    description:
+      'Get continuous assistance and maintenance to ensure your applications run smoothly and remain up-to-date with evolving needs.',
+    icon: <FaLifeRing />,
+  },
+];
+
+export default featuresData;

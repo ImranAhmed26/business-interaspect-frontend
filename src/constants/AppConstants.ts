@@ -35,7 +35,7 @@ export const navLinks = [
         name: 'Website Design',
         link: '/design',
         details:
-          'Visually stunning, responsive websites built to enhance your brand’s online presence and user engagement.',
+          'Visually stunning, responsive websites built with attention to detail to enhance your brand’s online presence and user engagement.',
       },
       {
         name: 'Ongoing Support',
@@ -48,11 +48,7 @@ export const navLinks = [
   { name: 'About', id: 1, value: 'about', link: '/about', dropdown: false },
 ];
 
-export const brand = {
+export const brandData = {
   name: `Business Interaspect`,
   slogan: `Skilled Developers. Transparent Pricing. Exceptional Results`,
-};
-
-export const paragraph = {
-  bannerMessage: `Join the heartfelt exchange: Where students embrace the cycle of giving, share the load, care for others, and illuminate brighter paths together!`,
 };

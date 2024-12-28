@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BannerConst, HighLightedWords } from '@/constants/landingPage';
+import { BannerData, HighLightedWords } from '@/constants/landingPage';
 import {
   containerVariants,
   itemVariants,
@@ -30,13 +30,13 @@ const Banner = () => {
           className='text-3xl font-extrabold mx-auto sm:text-6xl'
           variants={itemVariants()}
         >
-          {HighlightWords(BannerConst.title, HighLightedWords)}
+          {HighlightWords(BannerData.title, HighLightedWords)}
         </motion.h1>
         <motion.p
           className='max-w-2xl font-extralight text-xl sm:text-2xl text-brandLight dark:text-brandDark mx-auto'
           variants={itemVariants()}
         >
-          {BannerConst.subTitle}
+          {BannerData.subTitle}
         </motion.p>
       </motion.div>
       <motion.div
@@ -48,7 +48,7 @@ const Banner = () => {
       </motion.div>
       <motion.div>
         <div className='pt-20 '>
-          <H4 para={BannerConst.description} />
+          <H4 para={BannerData.description} />
         </div>
       </motion.div>
     </motion.div>

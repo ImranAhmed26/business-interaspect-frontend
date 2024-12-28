@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
-import { brand, navLinks } from '@/constants/AppConstants';
+import { brandData, navLinks } from '@/constants/AppConstants';
 // import DropdownMenu from '../interface/dropdown/NavMenu';
 import CommonModal from '../UI/modal/CommonModal';
 import ThemeSwitch from '../UI/CustomFeature/ThemeSwitch';
@@ -45,7 +45,7 @@ const PrimaryNavbar = () => {
       <div className='w-full max-w-8xl h-20 px-10 text-lg font-medium flex gap-4 items-center justify-between'>
         <div className=''>
           <div className='text-2xl font-bold text-brandLight dark:text-brandDark drop-shadow-md'>
-            <Link href={'/'}>{brand.name}</Link>
+            <Link href={'/'}>{brandData.name}</Link>
             {/* <Image src={PrimaryLogo} width={200} height={40} alt='Business Interaspect' /> */}
           </div>
         </div>

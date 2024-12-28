@@ -10,7 +10,7 @@ import PartnershipLight from '../../../../public/assets/partnership-light.png';
 import PartnershipDark from '../../../../public/assets/partnership-dark.png';
 import { useTheme } from 'next-themes';
 import H3 from '@/components/UI/Typography/H3';
-import { BannerConst, WorkWithUsPoints } from '@/constants/landingPage';
+import { BannerData, WorkWithUsData } from '@/constants/landingPage';
 
 const WorkWithUs = () => {
   const [mounted, setMounted] = useState(false);
@@ -37,7 +37,7 @@ const WorkWithUs = () => {
             variants={containerVariants(0.4)} // Stagger speed for the list
             className='pt-10 h-full flex flex-col justify-center'
           >
-            {WorkWithUsPoints.map((point, index: number) => (
+            {WorkWithUsData.map((point, index: number) => (
               <motion.div
                 key={index}
                 className='max-w-md sm:text-xl flex gap-3 items-center font-normal bg-gray-200 dark:bg-[#1a2744] m-3 py-4 px-3 rounded-xl cursor-pointer'
@@ -74,7 +74,7 @@ const WorkWithUs = () => {
         </motion.div>
       </motion.div>
       <motion.div className='py-20'>
-        <H3 para={BannerConst.description2} />
+        <H3 para={BannerData.description2} />
       </motion.div>
     </motion.div>
   );

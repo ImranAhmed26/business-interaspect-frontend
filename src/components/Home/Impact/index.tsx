@@ -3,7 +3,7 @@ import { useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import StackedCards from '@/components/Home/Impact/StackedCards';
-import { StackedCardConst } from '@/constants/landingPage';
+import { ImpactData } from '@/constants/landingPage';
 
 export default function Impact() {
   const container = useRef(null);
@@ -24,8 +24,8 @@ export default function Impact() {
 
   return (
     <main ref={container} className='relative mt-[1vh] w-full'>
-      {StackedCardConst.map((cardItem, i) => {
-        const targetScale = 1 - (StackedCardConst.length - i) * 0.05;
+      {ImpactData.map((cardItem, i) => {
+        const targetScale = 1 - (ImpactData.length - i) * 0.05;
         return (
           <StackedCards
             key={`p_${i}`}
