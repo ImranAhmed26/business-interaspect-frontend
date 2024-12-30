@@ -14,7 +14,7 @@ const Projects = () => {
 
   return (
     <div className='flex flex-col justify-center items-center pt-20'>
-      <div className='max-w-7xl flex flex-col items-center'>
+      <div className='max-w-7xl flex flex-col items-center gap-10'>
         <div className=''>
           {!isDark ? (
             <Image

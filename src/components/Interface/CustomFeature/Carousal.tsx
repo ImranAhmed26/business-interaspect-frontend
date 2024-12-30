@@ -36,15 +36,15 @@ const NavigationBtn = () => {
 export default function Carousel() {
   return (
     <motion.div
-      className=' min-h-screen py-10 md:px-4 '
+      className=' min-h-screen py-0 md:px-4'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h1 className='text-2xl md:text-4xl font-bold text-center mb-10 '>
+      <h1 className='text-2xl md:text-4xl font-bold text-center mb-10'>
         Our Past Projects
       </h1>
-      <div className='relative max-w-xs md:max-w-6xl mx-auto bg-gray-300/40 dark:bg-gray-900/70 backdrop-blur-2xl rounded-large md:rounded-3xl drop-shadow-md overflow-hidden'>
+      <div className='relative max-w-xs md:max-w-6xl mx-auto bg-gray-300/40 dark:bg-gray-900/70 backdrop-blur-2xl rounded-large lg:rounded-3xl drop-shadow-md overflow-hidden'>
         <Swiper
           modules={[Navigation]}
           className='mySwiper'
