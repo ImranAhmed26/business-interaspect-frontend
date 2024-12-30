@@ -20,7 +20,7 @@ export function Card({
 
   return (
     <motion.div
-      className='flex flex-col lg:flex-row lg:h-[60dvh] 2xl:h-[55dvh] overflow-hidden shadow-lg rounded-large lg:rounded-3xl pb-10 lg:pb-0'
+      className='flex flex-col md:max-h-[600px] lg:flex-row lg:h-[60dvh] lg:max-h-[500px] overflow-hidden shadow-lg rounded-xl lg:rounded-3xl pb-10 lg:pb-0'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
@@ -52,7 +52,7 @@ export function Card({
       >
         {/* First Image (Initially behind) */}
         <motion.div
-          className='absolute top-9 right-16 w-4/6 z-0 hidden lg:block'
+          className='absolute top-9 right-16 w-4/6 z-0 hidden lg:block lg:pt-10 xl:pt-0'
           initial={{ scale: 1, zIndex: 0 }}
           whileHover={{
             scale: 1.1,
@@ -72,7 +72,7 @@ export function Card({
             transition: { duration: 0.3 },
           }}
         >
-          <Image src={imagePrimary} alt={title} className='md:rounded-large' />
+          <Image src={imagePrimary} alt={title} className='lg:rounded-large' />
         </motion.div>
       </div>
     </motion.div>

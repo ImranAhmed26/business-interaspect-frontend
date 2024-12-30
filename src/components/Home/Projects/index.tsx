@@ -13,9 +13,9 @@ const Projects = () => {
   if (!mounted) return <div>[]</div>;
 
   return (
-    <div className='flex flex-col justify-center items-center pt-20'>
-      <div className='max-w-7xl flex flex-col items-center gap-10'>
-        <div className=''>
+    <div className='flex flex-col justify-center items-center pt-20 '>
+      <div className='max-w-7xl flex flex-col items-center gap-10 '>
+        <div className='px-10 sm:px-20 '>
           {!isDark ? (
             <Image
               src={'/assets/girl-programmer.png'}
