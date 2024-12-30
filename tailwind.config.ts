@@ -7,6 +7,15 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'bg-green-200/40',
+    'bg-amber-200/40',
+    'bg-amber-300/40',
+    'bg-amber-400/40',
+    'bg-indigo-200/40',
+    'bg-indigo-300/40',
+    'bg-indigo-400/40',
+  ],
   prefix: '',
   theme: {
     container: {

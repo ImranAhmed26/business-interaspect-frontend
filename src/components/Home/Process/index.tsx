@@ -9,10 +9,10 @@ import Image from 'next/image';
 import PartnershipLight from '../../../../public/assets/partnership-light.png';
 import PartnershipDark from '../../../../public/assets/partnership-dark.png';
 import { useTheme } from 'next-themes';
-import H3 from '@/components/UI/Typography/H3';
-import { BannerData, WorkWithUsData } from '@/constants/landingPage';
+import H3 from '@/components/Interface/Typography/H3';
+import { BannerData, ProcessData } from '@/constants/landingPage';
 
-const WorkWithUs = () => {
+const Process = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
@@ -37,7 +37,7 @@ const WorkWithUs = () => {
             variants={containerVariants(0.4)} // Stagger speed for the list
             className='pt-10 h-full flex flex-col justify-center'
           >
-            {WorkWithUsData.map((point, index: number) => (
+            {ProcessData.map((point, index: number) => (
               <motion.div
                 key={index}
                 className='max-w-md sm:text-xl flex gap-3 items-center font-normal bg-gray-200 dark:bg-[#1a2744] m-3 py-4 px-3 rounded-xl cursor-pointer'
@@ -80,4 +80,4 @@ const WorkWithUs = () => {
   );
 };
 
-export default WorkWithUs;
+export default Process;

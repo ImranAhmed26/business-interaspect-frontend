@@ -1,16 +1,17 @@
 import Banner from '@/components/Home/Banner';
 import Features from '@/components/Home/Services';
-import Projects from '@/components/Home/Impact';
-import WorkWithUs from '@/components/Home/Process';
+import Impact from '@/components/Home/Impact';
+import Process from '@/components/Home/Process';
+import Projects from '@/components/Home/Projects';
 
 function Home() {
   return (
     <main>
       <Banner />
-      <WorkWithUs />
-      <Projects />
+      <Process />
+      <Impact />
       <Features />
-      <div className='h-dvh'></div>
+      <Projects />
     </main>
   );
 }

@@ -1,14 +1,14 @@
 import React from 'react';
-import featuresData from '@/constants/landingPage';
+import { featuresData } from '@/constants/landingPage';
 import FeatureItem from './ServiceItem';
-import SectionHeader from '@/components/UI/Typography/SectionHeader';
+import SectionHeader from '@/components/Interface/Typography/SectionHeader';
 import Image from 'next/image';
-import { Service } from '@/types/serviceItem';
+import { Service } from '@/types/Home/serviceItem';
 const Services = () => {
   return (
     <section
       id='features'
-      className='relative z-1 overflow-hidden bg-gray-1 py-17.5 dark:text-white lg:py-22.5 xl:py-27.5'
+      className='relative z-1 overflow-hidden bg-gray-1 dark:text-white '
     >
       {/* <!-- section title --> */}
       <SectionHeader

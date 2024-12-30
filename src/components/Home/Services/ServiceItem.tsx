@@ -1,4 +1,4 @@
-import { Service } from '@/types/serviceItem';
+import { Service } from '@/types/Home/serviceItem';
 import React from 'react';
 
 const ServiceItem = ({ data }: { data: Service }) => {
