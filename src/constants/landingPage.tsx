@@ -10,6 +10,13 @@ import { BsCalendar2Event } from 'react-icons/bs';
 import ReadingNewspaper from '../../public/assets/reading-newspaper.png';
 import DataAnalyst from '../../public/assets/data-analyst.png';
 import CodeTyping from '../../public/assets/code-typing.png';
+import ProjectOnePrimary from '../../public/assets/projects/project-1.1.png';
+import ProjectOneSecondary from '../../public/assets/projects/project-1.2.png';
+import ProjectTwoPrimary from '../../public/assets/projects/project-2.1.png';
+import ProjectTwoSecondary from '../../public/assets/projects/project-2.2.png';
+import ProjectThreePrimary from '../../public/assets/projects/project-3.2.png';
+import ProjectThreeSecondary from '../../public/assets/projects/project-3.3.png';
+
 import {
   FaLaptopCode,
   FaMobileAlt,
@@ -19,7 +26,8 @@ import {
   FaRocket,
 } from 'react-icons/fa';
 
-import { Service } from '@/types/serviceItem';
+import { Service } from '@/types/Home/serviceItem';
+import { projectItem } from '@/types/projectItem';
 
 export const BannerData = {
   title:
@@ -33,7 +41,7 @@ export const BannerData = {
 
 export const HighLightedWords = ['skilled', 'build', '$40'];
 
-export const WorkWithUsData = [
+export const ProcessData = [
   {
     text: 'Tell us about your needs and big idea',
     iconLight: <FaLightbulb />,
@@ -91,7 +99,7 @@ export const ImpactData = [
   },
 ];
 
-const featuresData: Service[] = [
+export const featuresData: Service[] = [
   {
     id: 1,
     title: 'Web Development',
@@ -136,4 +144,35 @@ const featuresData: Service[] = [
   },
 ];
 
-export default featuresData;
+export const projectData: projectItem[] = [
+  {
+    title: 'Book MOT',
+    type: 'Appointment Management',
+    subTitle: 'MOT test and service center',
+    description: `Book MOT is a comprehensive appointment management platform designed specifically for MOT testing and vehicle servicing. It offers users an intuitive way to schedule MOT tests, regular car services, and other essential vehicle inspections. We developed a user-friendly solution that allows both vehicle owners and service centers to schedule inspections with ease, ensuring safety and compliance.`,
+    imagePrimary: ProjectOnePrimary,
+    imageSecondary: ProjectOneSecondary,
+    color: 'green',
+    link: 'https://www.bookmot.com',
+  },
+  {
+    title: 'GPRC',
+    subTitle: 'Global plastic recycling council',
+    type: 'Trading Application',
+    description: `A platform designed to promote sustainable practices and collaboration within the plastic recycling industry. It connects stakeholders, including manufacturers, recyclers, and environmental advocates, aiming to reduce plastic waste and enhance the global recycling effort. We built a solution that facilitates collaboration, tracks recycled materials, and promotes sustainable practices for a cleaner, circular economy.`,
+    imagePrimary: ProjectTwoPrimary,
+    imageSecondary: ProjectTwoSecondary,
+    color: 'blue',
+    link: 'https://www.gprc.us',
+  },
+  {
+    title: 'AutoFella',
+    subTitle: 'Tyre buying application',
+    type: 'Marketplace',
+    description: `An innovative marketplace for purchasing tyres, offering customers a convenient way to browse and buy the best tyres for their vehicles. We designed an intuitive platform that seamlessly connects customers with fitting centers, streamlining the buying, selling and fitting process for a better overall experience.`,
+    imagePrimary: ProjectThreePrimary,
+    imageSecondary: ProjectThreeSecondary,
+    color: 'orange',
+    link: 'https://www.autofella.co.uk',
+  },
+];
