@@ -17,17 +17,17 @@ const Banner = () => {
 
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full h-[80vh]'
+      className='flex flex-col items-center gap-4 w-full lg:h-[80vh] sm:px-4 md:px-8 py-2 '
       variants={containerVariants()}
       initial='hidden'
       animate='visible'
     >
       <motion.div
-        className='space-y-5 max-w-4xl mx-auto text-center'
+        className='space-y-5 lg:max-w-4xl mx-auto text-center'
         variants={itemVariants()}
       >
         <motion.h1
-          className='text-3xl font-extrabold mx-auto sm:text-6xl'
+          className='text-3xl md:text-4xl lg:text-6xl font-extrabold mx-auto '
           variants={itemVariants()}
         >
           {HighlightWords(BannerData.title, HighLightedWords)}

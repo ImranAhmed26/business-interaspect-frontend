@@ -7,12 +7,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <PrimaryNavbar />
-      <main className='flex flex-col items-center px-4 py-20'>
-        <div className='max-w-7xl'>{children}</div>
+    <div className='flex flex-col min-h-screen'>
+      <header>
+        <PrimaryNavbar />
+      </header>
+
+      <main className='flex-grow px-4 py-20'>
+        <div className='max-w-7xl mx-auto'>{children}</div>
       </main>
-      <Footer />
-    </>
+
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
