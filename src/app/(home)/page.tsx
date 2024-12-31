@@ -1,5 +1,5 @@
 import Banner from '@/components/Home/Banner';
-import Features from '@/components/Home/Services';
+import Services from '@/components/Home/Services';
 import Impact from '@/components/Home/Impact';
 import Process from '@/components/Home/Process';
 import Projects from '@/components/Home/Projects';
@@ -10,7 +10,7 @@ function Home() {
       <Banner />
       <Process />
       <Impact />
-      <Features />
+      <Services />
       <Projects />
     </main>
   );

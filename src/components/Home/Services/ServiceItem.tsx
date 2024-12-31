@@ -10,7 +10,7 @@ const ServiceItem = ({ data }: { data: Service }) => {
         </div>
         <h3 className='mb-4.5 mt-7.5 text-2xl pt-0 font-bold '>{data.title}</h3>
       </div>
-      <p className='dark:text-gray-5'>{data.description}</p>
+      <p className='dark:text-gray-5 min-h-32'>{data.description}</p>
     </div>
   );
 };

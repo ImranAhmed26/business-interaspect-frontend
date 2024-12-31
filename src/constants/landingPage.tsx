@@ -99,7 +99,7 @@ export const ImpactData = [
   },
 ];
 
-export const featuresData: Service[] = [
+export const serviceData: Service[] = [
   {
     id: 1,
     title: 'Web Development',
@@ -109,7 +109,7 @@ export const featuresData: Service[] = [
   },
   {
     id: 2,
-    title: 'Landing Pages & Personal Websites',
+    title: 'Landing Pages',
     description:
       'Craft custom landing pages and personal websites designed to captivate audiences, highlight your brand, and drive conversions with modern design and responsiveness.',
     icon: <FaRocket />,

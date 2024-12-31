@@ -1,6 +1,6 @@
 import React from 'react';
-import { featuresData } from '@/constants/landingPage';
-import FeatureItem from './ServiceItem';
+import { serviceData } from '@/constants/landingPage';
+import ServiceItem from './ServiceItem';
 import SectionHeader from '@/components/Interface/Typography/SectionHeader';
 import Image from 'next/image';
 import { Service } from '@/types/Home/serviceItem';
@@ -20,12 +20,12 @@ const Services = () => {
       <div className='relative z-1 mx-auto w-full max-w-6xl px-4 sm:px-8 xl:px-0'>
         <div className='grid grid-cols-1 gap-7.5 sm:grid-cols-2 lg:grid-cols-3'>
           {/* <!-- features item --> */}
-          {featuresData?.map((item: Service, key: number) => (
-            <FeatureItem data={item} key={key} />
+          {serviceData?.map((item: Service, key: number) => (
+            <ServiceItem data={item} key={key} />
           ))}
         </div>
 
-        {/* <!-- Features Bg Shapes --> */}
+        {/* <!-- Features Background Shapes --> */}
         <div className='hidden sm:block'>
           <div className='absolute left-0 top-1/2 -z-1 -translate-y-1/2'>
             <Image
