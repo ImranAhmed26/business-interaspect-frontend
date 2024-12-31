@@ -36,7 +36,7 @@ const Process = () => {
         />
       </div>
       <motion.div
-        className='relative lg:w-full max-w-7xl  lg:h-[60dvh] space-y-5 mx-auto py-9 sm:p-10 text-center bg-white dark:bg-gray-900/80 rounded-3xl flex gap-4 lg:overflow-hidden'
+        className='relative lg:w-full max-w-7xl  lg:h-[70dvh] 2xl:h-[60dvh] space-y-5 mx-auto py-9 sm:p-10 text-center bg-white dark:bg-gray-900/80 rounded-3xl flex gap-4 lg:overflow-hidden'
         variants={itemVariants(0.5, 30)} // Customize animation for this container
       >
         <div className='px-1'>
