@@ -36,10 +36,10 @@ const Process = () => {
         />
       </div>
       <motion.div
-        className='relative w-ful max-w-7xl  lg:h-[70dvh] space-y-5 mx-auto py-9 sm:p-10 text-center bg-white dark:bg-gray-900/80 rounded-3xl flex gap-4 lg:overflow-hidden'
+        className='relative lg:w-full max-w-7xl  lg:h-[60dvh] space-y-5 mx-auto py-9 sm:p-10 text-center bg-white dark:bg-gray-900/80 rounded-3xl flex gap-4 lg:overflow-hidden'
         variants={itemVariants(0.5, 30)} // Customize animation for this container
       >
-        <div className='max-w-fi'>
+        <div className='px-1'>
           <H3 para={`Working with us is simple, hassle-free, and fast`} />
           <motion.div
             variants={containerVariants(0.4)} // Stagger speed for the list

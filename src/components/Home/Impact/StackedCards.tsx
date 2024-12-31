@@ -36,14 +36,14 @@ const StackedCards = ({
   return (
     <div
       ref={container}
-      className='h-screen flex items-center justify-center sticky top-10 bg-red-10 2xl:px-20 max-w-screen-2xl '
+      className='h-screen flex items-center justify-center sticky top-10 bg-red-10 max-w-screen-2xl '
     >
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 55}px)`,
         }}
-        className='bg-gray-300/40 dark:bg-gray-900/70 backdrop-blur-2xl flex flex-col relative -top-[25%] lg:h-[70dvh] rounded-3xl p-6 md:p-12 transform-origin-top'
+        className='bg-gray-300/40 dark:bg-gray-900/70 backdrop-blur-2xl flex flex-col relative -top-[25%] lg:h-[60dvh] rounded-3xl p-6 md:p-12 transform-origin-top'
       >
         <div className='flex flex-col items-center md:flex-row h-full mt-2 md:gap-12'>
           <div className='flex flex-col justify-center gap-2 md:gap-4 relative md:w-2/4 bg-lime-20 min-h-64'>

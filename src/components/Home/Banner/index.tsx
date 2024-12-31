@@ -17,7 +17,7 @@ const Banner = () => {
 
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full lg:h-[80vh] sm:px-4 md:px-8 py-2 '
+      className='flex flex-col items-center gap-4 w-full lg:h-[80vh] sm:px-4 md:px-8 py-2 lg:mt-20'
       variants={containerVariants()}
       initial='hidden'
       animate='visible'
@@ -27,7 +27,7 @@ const Banner = () => {
         variants={itemVariants()}
       >
         <motion.h1
-          className='text-3xl md:text-4xl lg:text-6xl font-extrabold mx-auto '
+          className='text-3xl md:text-5xl lg:text-6xl font-extrabold mx-auto '
           variants={itemVariants()}
         >
           {HighlightWords(BannerData.title, HighLightedWords)}
