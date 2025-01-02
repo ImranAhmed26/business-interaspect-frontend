@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;

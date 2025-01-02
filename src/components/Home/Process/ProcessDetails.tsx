@@ -1,6 +1,6 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ProcessStep } from './types';
+import { ProcessStep } from '../../../types/Home/processStep';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
