@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <section
       id='features'
-      className='relative z-1 overflow-hidden bg-gray-1 dark:text-white '
+      className='relative z-1 overflow-hidden bg-gray-1 '
     >
       {/* <!-- section title --> */}
       <SectionHeader

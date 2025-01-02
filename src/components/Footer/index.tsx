@@ -1,7 +1,7 @@
 // footer.tsx
 const Footer = () => {
   return (
-    <footer className='bg-gray-900 text-white  py-8'>
+    <footer className='bg-gray-900 text-white mt-12 py-8'>
       <div className='max-w-7xl mx-auto px-6'>
         {/* Business Name */}
         <div className='text-center text-2xl font-bold mb-4'>

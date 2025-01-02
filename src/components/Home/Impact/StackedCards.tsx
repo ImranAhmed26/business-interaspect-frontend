@@ -36,7 +36,7 @@ const StackedCards = ({
   return (
     <div
       ref={container}
-      className='h-screen flex items-center justify-center sticky top-10 bg-red-10 max-w-screen-2xl '
+      className='h-screen flex items-center justify-center sticky top-10 bg-red-10 max-w-screen-xl '
     >
       <motion.div
         style={{

@@ -191,7 +191,7 @@ const config: Config = {
         fuchsia: colors.fuchsia,
         pink: colors.pink,
         rose: colors.rose,
-        brandLight: '#6243ff',
+        brandLight: 'rgb(79 70 229 / var(--tw-bg-opacity, 1))',
         brandDark: '#a18eff',
         customGray: '#374151',
         customGrayLight: '#4b5563',

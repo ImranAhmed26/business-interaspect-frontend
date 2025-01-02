@@ -8,17 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <div className='flex flex-col min-h-screen'>
-      <header>
-        <PrimaryNavbar />
-      </header>
-
-      <main className='flex-grow px-4 py-20'>
-        <div className='max-w-7xl mx-auto'>{children}</div>
-      </main>
-
-      <footer>
-        <Footer />
-      </footer>
+      <PrimaryNavbar />
+      <div className='mx-auto'>{children}</div>
+      <Footer />
     </div>
   );
 }
