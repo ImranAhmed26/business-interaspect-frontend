@@ -38,7 +38,7 @@ export const BannerData = {
   description2:
     'We provide you with top talents for your Web, Mobile, and Custom Software development ensuring scalable software solutions at affordable rates',
   description:
-    'At Business Interaspect, we empower SMEs and startups to bring their vision to life',
+    `Teaming up with world-class developers to co-create a winning product. At Business Interaspect, we empower SMEs and startups to bring their vision to life. `,
 };
 
 export const HighLightedWords = ['skilled', 'build', '$40'];
