@@ -88,6 +88,13 @@ export const navLinks: NavLink[] = [
   },
 
   { name: 'About', id: 4, value: 'about', link: '/about', dropdown: false },
+  {
+    name: 'Contact Us',
+    id: 5,
+    value: 'contact',
+    link: '/contact',
+    dropdown: false,
+  },
 ];
 
 export const brandData = {
