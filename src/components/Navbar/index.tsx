@@ -11,6 +11,7 @@ import ThemeSwitch from '../Interface/CustomFeature/ThemeSwitch';
 import Dropdown from '../Interface/Dropdown/Dropdown';
 import { MenuItem } from '@headlessui/react';
 import NavbarMenu from '../Interface/Dropdown/NavMenu';
+import { NavLink } from '@/types/Home/banner';
 
 // type NavLink = {
 //   name: string;
@@ -51,7 +52,7 @@ const PrimaryNavbar = () => {
           </div>
         </div>
         <div className='hidden lg:flex gap-3 items-center'>
-          {navLinks.map((navLink, idx) => {
+          {navLinks.map((navLink: NavLink, idx: number) => {
             return (
               <div key={idx}>
                 {!navLink.dropdown ? (

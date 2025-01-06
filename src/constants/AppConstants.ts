@@ -1,10 +1,12 @@
+import { NavLink } from '@/types/Home/banner';
+
 export const metadataConst = {
   title: 'Business Interaspect',
   description:
     'We provide you with top talents for your Web, Mobile, and Custom Software development ensuring scalable software solutions at affordable rates',
 };
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { name: 'home', id: 1, value: 'home', link: '/', dropdown: false },
   {
     name: 'Service',
@@ -82,21 +84,9 @@ export const navLinks = [
         details:
           'Develop interactive learning management systems (LMS), virtual classrooms, and educational content platforms tailored for modern education.',
       },
-      // {
-      //   name: 'Travel and Hospitality',
-      //   link: '/travel-hospitality',
-      //   details:
-      //     'Design booking systems, travel planning apps, and customer experience tools to enhance operations in the travel and hospitality sector.',
-      // },
-      // {
-      //   name: 'Food and Beverage',
-      //   link: '/food-beverage',
-      //   details:
-      //     'Craft technology solutions for the food industry, such as online ordering systems, delivery tracking, and inventory management tools.',
-      // },
     ],
   },
-  ,
+
   { name: 'About', id: 4, value: 'about', link: '/about', dropdown: false },
 ];
 
