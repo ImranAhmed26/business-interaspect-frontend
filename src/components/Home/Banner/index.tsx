@@ -17,13 +17,13 @@ const Banner = () => {
 
   return (
     <motion.div
-      className='flex flex-col items-center gap-4 w-full lg:h-[90vh] sm:px-4 md:px-8 py-2 lg:mt-20 xl:mt-28'
+      className='flex flex-col items-center justify-between lg:justify-start gap-4 w-full h-[75vh] lg:h-[80vh] sm:px-4 px-8 my-20 lg:my-0 lg:mt-20 xl:mt-28 bg-lime-30'
       variants={containerVariants()}
       initial='hidden'
       animate='visible'
     >
       <motion.div
-        className='space-y-5 lg:max-w-5xl mx-auto text-center'
+        className='space-y-5 max-w-80 lg:max-w-4xl mx-auto text-center'
         variants={itemVariants()}
       >
         <motion.h1

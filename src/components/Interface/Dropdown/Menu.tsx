@@ -1,15 +1,15 @@
 'use client';
 import React, { ReactNode } from 'react';
 import { Menu, MenuItems } from '@headlessui/react';
-import { RiArrowDropDownLine } from 'react-icons/ri';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Menu as MenuIcon, X } from 'lucide-react';
 
 type Children = {
   children: ReactNode;
   title?: string;
 };
 
-const DropdownMenu = ({ children, title = 'menu' }: Children) => {
+const DropdownMenu = ({ children }: Children) => {
   return (
     <div className='py-1'>
       <Menu
@@ -19,13 +19,17 @@ const DropdownMenu = ({ children, title = 'menu' }: Children) => {
         {({ open }) => (
           <>
             <Menu.Button className='flex gap-1 justify-center p-1 hover:text-brandLight dark:hover:text-brandDark transition-all duration-100'>
-              {title}
-              <motion.div
+              {open ? (
+                <X className='h-8 w-8' />
+              ) : (
+                <MenuIcon className='h-8 w-8' />
+              )}
+              {/* <motion.div
                 animate={{ rotate: open ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
                 <RiArrowDropDownLine className='text-3xl' aria-hidden='true' />
-              </motion.div>
+              </motion.div> */}
             </Menu.Button>
             <AnimatePresence>
               {open && (

@@ -29,7 +29,13 @@ export const ProcessCard = ({
           : 'border-black/5 bg-black/5 dark:border-white/5 dark:bg-white/5'
       } p-6 transition-all duration-300`}
     >
-      <div className='absolute top-0 right-0 p-4 text-black/20 dark:text-white/20'>
+      <div
+        className={`absolute top-0 right-0 p-4 ${
+          isActive
+            ? 'text-gray-700/45 dark:text-gray-200/50'
+            : 'text-black/20 dark:text-white/20'
+        } `}
+      >
         <span className='text-7xl font-bold'>
           {String(step).padStart(2, '0')}
         </span>
@@ -47,7 +53,7 @@ export const ProcessCard = ({
             isActive
               ? 'text-brandLight dark:text-brandDark'
               : 'text-black/70 dark:text-white/70'
-          } mb-2`}
+          } mb-2 mt-5`}
         >
           {title}
         </h3>

@@ -10,6 +10,8 @@ import CommonModal from '../Interface/modal/CommonModal';
 import ThemeSwitch from '../Interface/CustomFeature/ThemeSwitch';
 import Dropdown from '../Interface/Dropdown/Dropdown';
 import { MenuItem } from '@headlessui/react';
+import NavbarMenu from '../Interface/Dropdown/NavMenu';
+import { NavLink } from '@/types/Home/banner';
 
 // type NavLink = {
 //   name: string;
@@ -44,13 +46,13 @@ const PrimaryNavbar = () => {
     >
       <div className='w-full max-w-8xl h-20 px-10 text-lg font-medium flex gap-4 items-center justify-between'>
         <div className=''>
-          <div className='text-2xl font-bold text-brandLight dark:text-brandDark drop-shadow-md'>
+          <div className='lg:text-2xl font-bold text-brandLight dark:text-brandDark drop-shadow-md'>
             <Link href={'/'}>{brandData.name}</Link>
             {/* <Image src={PrimaryLogo} width={200} height={40} alt='Business Interaspect' /> */}
           </div>
         </div>
         <div className='hidden lg:flex gap-3 items-center'>
-          {navLinks.map((navLink, idx) => {
+          {navLinks.map((navLink: NavLink, idx: number) => {
             return (
               <div key={idx}>
                 {!navLink.dropdown ? (
@@ -97,18 +99,18 @@ const PrimaryNavbar = () => {
             );
           })}
         </div>
-        <div className='justify-between lg:flex lg:w-40'>
-          <div className='w-1/2 lg:px-3 py-1.5 lg:flex justify-end'>
+        <div className='justify-between flex lg:w-40'>
+          <div className='w-1/2 lg:px-3 py-2.5 lg:flex justify-end'>
             <ThemeSwitch />
           </div>
-          <button
+          {/* <button
             className='w-1/2 text-base text-primaryLight hover:bg-primary hover:border-primary hover:text-brandLight dark:hover:text-brandDark font-semibold border border-primaryLight rounded-sm p-1 transition-all duration-100 drop-shadow-sm hidden lg:block'
             onClick={() => {
               setOpenModal(true);
             }}
           >
             Sign in
-          </button>
+          </button> */}
           <CommonModal
             setIsOpen={setOpenModal}
             isOpen={openModal}
@@ -120,18 +122,18 @@ const PrimaryNavbar = () => {
           >
             <div>Sign In form in progress</div>
           </CommonModal>
+          <div className='block lg:hidden'>
+            <NavbarMenu
+              menuOptions={[
+                ...navLinks,
+                {
+                  name: 'Sign In',
+                  func: () => setOpenModal(true),
+                },
+              ]}
+            />
+          </div>
         </div>
-        {/* <div className='block lg:hidden'>
-          <DropdownMenu
-            menuOptions={[
-              ...navLinks,
-              {
-                name: 'Sign In',
-                func: () => setOpenModal(true),
-              },
-            ]}
-          />
-        </div> */}
       </div>
     </div>
   );
