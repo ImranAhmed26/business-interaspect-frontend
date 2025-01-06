@@ -10,9 +10,9 @@ export const Container = ({ children, className = '' }: ContainerProps) => (
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className='text-center mb-16 '
+    className='mb-16'
   >
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 ${className}`}>
       {children}
     </div>
   </motion.div>

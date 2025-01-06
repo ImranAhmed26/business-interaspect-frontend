@@ -5,10 +5,10 @@ export const metadataConst = {
 };
 
 export const navLinks = [
-  { name: 'home', id: 2, value: 'home', link: '/', dropdown: false },
+  { name: 'home', id: 1, value: 'home', link: '/', dropdown: false },
   {
     name: 'Service',
-    id: 1,
+    id: 2,
     value: 'service',
     link: '/service',
     dropdown: true,
@@ -45,7 +45,59 @@ export const navLinks = [
       },
     ],
   },
-  { name: 'About', id: 1, value: 'about', link: '/about', dropdown: false },
+  {
+    name: 'Industries',
+    id: 3,
+    value: 'industries',
+    link: '/industries',
+    dropdown: true,
+    options: [
+      {
+        name: 'Ecommerce and Retail',
+        link: '/ecommerce',
+        details:
+          'Develop scalable e-commerce platforms with features like inventory management, payment gateways, and personalized shopping experiences to boost sales.',
+      },
+      {
+        name: 'Healthcare and Wellness',
+        link: '/healthcare',
+        details:
+          'Build secure healthcare solutions, including telemedicine platforms, appointment systems, and patient portals, ensuring compliance with industry regulations.',
+      },
+      {
+        name: 'Service Based Businesses',
+        link: '/service-based',
+        details:
+          'Empowering service-based businesses with  custom CRM, appointment tools, and client portals to streamline operations and improve customer satisfaction.',
+      },
+      {
+        name: 'Charities and Nonprofits',
+        link: '/charities',
+        details:
+          'Support charitable organizations with donation platforms, volunteer management systems, landing pages and outreach tools for impactful community engagement.',
+      },
+      {
+        name: 'Ed-Tech',
+        link: '/edtech',
+        details:
+          'Develop interactive learning management systems (LMS), virtual classrooms, and educational content platforms tailored for modern education.',
+      },
+      // {
+      //   name: 'Travel and Hospitality',
+      //   link: '/travel-hospitality',
+      //   details:
+      //     'Design booking systems, travel planning apps, and customer experience tools to enhance operations in the travel and hospitality sector.',
+      // },
+      // {
+      //   name: 'Food and Beverage',
+      //   link: '/food-beverage',
+      //   details:
+      //     'Craft technology solutions for the food industry, such as online ordering systems, delivery tracking, and inventory management tools.',
+      // },
+    ],
+  },
+  ,
+  { name: 'About', id: 4, value: 'about', link: '/about', dropdown: false },
 ];
 
 export const brandData = {

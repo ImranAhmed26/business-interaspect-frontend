@@ -1,9 +1,8 @@
 'use client';
 import React, { ReactNode } from 'react';
 import { Menu, MenuItems } from '@headlessui/react';
-import { RiArrowDropDownLine } from 'react-icons/ri';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Menu as MenuIcon, X } from 'lucide-react';
+import { Menu as MenuIcon, X } from 'lucide-react';
 
 type Children = {
   children: ReactNode;

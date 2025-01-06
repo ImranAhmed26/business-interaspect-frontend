@@ -3,8 +3,6 @@ import { Service } from '@/types/Home/serviceItem';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-type ServiceWithKey = Service & { key: number };
-
 const ServiceItem = ({ data, key }: { data: Service; key: number }) => {
   return (
     <motion.div
