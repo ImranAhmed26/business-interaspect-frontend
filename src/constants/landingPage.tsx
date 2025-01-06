@@ -33,15 +33,14 @@ import { projectItem } from '@/types/projectItem';
 
 export const BannerData = {
   title:
-    'Build your website with skilled engineers starting at just $40 per hour!',
+    'Build your website with world-class developers starting at just $40 per hour!',
   subTitle: 'Skilled Developers • Transparent Pricing • Exceptional Results',
   description2:
     'We provide you with top talents for your Web, Mobile, and Custom Software development ensuring scalable software solutions at affordable rates',
-  description:
-    `Teaming up with world-class developers to co-create a winning product. At Business Interaspect, we empower SMEs and startups to bring their vision to life. `,
+  description: `Teaming up with world-class developers to co-create a winning product. At Business Interaspect, we empower SMEs and startups to bring their vision to life. `,
 };
 
-export const HighLightedWords = ['skilled', 'build', '$40'];
+export const HighLightedWords = ['skilled', 'world-class', 'build', '$40'];
 
 // export const ProcessData = [
 //   {

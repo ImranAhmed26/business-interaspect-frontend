@@ -23,7 +23,7 @@ const Banner = () => {
       animate='visible'
     >
       <motion.div
-        className='space-y-5 max-w-80 lg:max-w-5xl mx-auto text-center'
+        className='space-y-5 max-w-80 lg:max-w-4xl mx-auto text-center'
         variants={itemVariants()}
       >
         <motion.h1
