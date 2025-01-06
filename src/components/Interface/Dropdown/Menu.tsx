@@ -9,7 +9,7 @@ type Children = {
   title?: string;
 };
 
-const DropdownMenu = ({ children, title = '' }: Children) => {
+const DropdownMenu = ({ children }: Children) => {
   return (
     <div className='py-1'>
       <Menu
