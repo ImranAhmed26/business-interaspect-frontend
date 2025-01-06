@@ -25,6 +25,9 @@ const Footer = () => {
         </div> */}
 
         {/* Copyright */}
+        <div className='text-center text-sm text-gray-400 pb-1'>
+          {` 705 Progress Ave Suite 110, Scarborough, ON M1H 2X1 `}
+        </div>
         <div className='text-center text-sm text-gray-400'>
           &copy; {new Date().getFullYear()} Business Interaspect. All rights
           reserved.
