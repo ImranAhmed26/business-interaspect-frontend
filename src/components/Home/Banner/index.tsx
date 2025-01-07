@@ -11,9 +11,18 @@ import { HighlightWords } from '../../Interface/CustomFeature/HighlightedWords';
 import H4 from '@/components/Interface/Typography/H4';
 import ActionButton from '@/components/Interface/Button/ActionButton';
 import AltButton from '@/components/Interface/Button/AltButton';
+import { useRouter } from 'next/navigation';
 
 const Banner = () => {
-  const handleStartBuilding = () => {};
+  const router = useRouter();
+
+  const handleStartBuilding = () => {
+    router.push('https://calendly.com/business-interaspect/free-consultation');
+  };
+
+  const handleLearnMore = () => {
+    router.push('/about');
+  };
 
   return (
     <motion.div
@@ -43,8 +52,11 @@ const Banner = () => {
         className='flex items-center justify-center gap-4 pt-10'
         variants={itemVariants()}
       >
-        <ActionButton title='Start building' func={handleStartBuilding} />
-        <AltButton title='Learn more' func={handleStartBuilding} />
+        <ActionButton
+          title='Schedule free consultation'
+          func={handleStartBuilding}
+        />
+        <AltButton title='Learn more' func={handleLearnMore} />
       </motion.div>
       <motion.div>
         <div className='pt-20 '>

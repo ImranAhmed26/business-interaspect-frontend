@@ -18,9 +18,13 @@ import {
 } from 'lucide-react';
 import AltButton from '@/components/Interface/Button/AltButton';
 import ActionButton from '@/components/Interface/Button/ActionButton';
+import { useRouter } from 'next/navigation';
 
 export default function About() {
-  const handleBooking = () => {};
+  const router = useRouter();
+  const handleBooking = () => {
+    router.push('https://calendly.com/business-interaspect/free-consultation');
+  };
   return (
     <main className='min-h-screen bg-background'>
       {/* Hero Section */}
