@@ -21,7 +21,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      // Contact Section
+      {/* Contact Section */}
       <BookAppointment />
     </main>
   );
