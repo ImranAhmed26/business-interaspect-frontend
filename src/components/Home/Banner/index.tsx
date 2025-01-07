@@ -53,7 +53,7 @@ const Banner = () => {
         variants={itemVariants()}
       >
         <ActionButton
-          title='Get Free consultation'
+          title='Schedule free consultation'
           func={handleStartBuilding}
         />
         <AltButton title='Learn more' func={handleLearnMore} />
