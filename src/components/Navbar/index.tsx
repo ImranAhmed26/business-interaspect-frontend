@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useScroll from '@/lib/hooks/useScroll';
-import { brandData, navLinks } from '@/constants/AppConstants';
+import { brandData, navLinkData } from '@/constants/AppConstants';
 // import DropdownMenu from '../interface/dropdown/NavMenu';
 import CommonModal from '../Interface/modal/CommonModal';
 import ThemeSwitch from '../Interface/CustomFeature/ThemeSwitch';
@@ -52,7 +52,7 @@ const PrimaryNavbar = () => {
           </div>
         </div>
         <div className='hidden lg:flex gap-3 items-center'>
-          {navLinks.map((navLink: NavLink, idx: number) => {
+          {navLinkData.map((navLink: NavLink, idx: number) => {
             return (
               <div key={idx}>
                 {!navLink.dropdown ? (
@@ -125,7 +125,7 @@ const PrimaryNavbar = () => {
           <div className='block lg:hidden'>
             <NavbarMenu
               menuOptions={[
-                ...navLinks,
+                ...navLinkData,
                 {
                   name: 'Sign In',
                   func: () => setOpenModal(true),
