@@ -6,7 +6,7 @@ export const metadataConst = {
     'We provide you with top talents for your Web, Mobile, and Custom Software development ensuring scalable software solutions at affordable rates',
 };
 
-export const navLinks: NavLink[] = [
+export const navLinkData: NavLink[] = [
   { name: 'home', id: 1, value: 'home', link: '/', dropdown: false },
   {
     name: 'Service',
@@ -59,6 +59,12 @@ export const navLinks: NavLink[] = [
         link: '/ecommerce',
         details:
           'Develop scalable e-commerce platforms with features like inventory management, payment gateways, and personalized shopping experiences to boost sales.',
+      },
+      {
+        name: 'Real Estate and Housing',
+        link: '/real-estate',
+        details:
+          'Create sales landing pages, property listing platforms, virtual tours, and client management systems for real estate businesses to connect with buyers and renters.',
       },
       {
         name: 'Healthcare and Wellness',
