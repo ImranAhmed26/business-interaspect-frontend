@@ -66,12 +66,12 @@ export const navLinkData: NavLink[] = [
         details:
           'Create sales landing pages, property listing platforms, virtual tours, and client management systems for real estate businesses to connect with buyers and renters.',
       },
-      {
-        name: 'Healthcare and Wellness',
-        link: '/healthcare',
-        details:
-          'Build secure healthcare solutions, including telemedicine platforms, appointment systems, and patient portals, ensuring compliance with industry regulations.',
-      },
+      // {
+      //   name: 'Healthcare and Wellness',
+      //   link: '/healthcare',
+      //   details:
+      //     'Build secure healthcare solutions, including telemedicine platforms, appointment systems, and patient portals, ensuring compliance with industry regulations.',
+      // },
       {
         name: 'Service Based Businesses',
         link: '/service-based',
@@ -84,12 +84,12 @@ export const navLinkData: NavLink[] = [
         details:
           'Support charitable organizations with donation platforms, volunteer management systems, landing pages and outreach tools for impactful community engagement.',
       },
-      {
-        name: 'Ed-Tech',
-        link: '/edtech',
-        details:
-          'Develop interactive learning management systems (LMS), virtual classrooms, and educational content platforms tailored for modern education.',
-      },
+      // {
+      //   name: 'Ed-Tech',
+      //   link: '/edtech',
+      //   details:
+      //     'Develop interactive learning management systems (LMS), virtual classrooms, and educational content platforms tailored for modern education.',
+      // },
     ],
   },
 
