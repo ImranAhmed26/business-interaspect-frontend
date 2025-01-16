@@ -1,6 +1,4 @@
-import IndustryHero, {
-  HousingComponentTwo,
-} from '@/components/Home/Industries';
+import { HousingComponentTwo } from '@/components/Home/Industries';
 import Picture from '../../../../../public/assets/industries/real-estate-05.jpg';
 import Picture2 from '../../../../../public/assets/industries/real-estate-02.jpg';
 import Picture3 from '../../../../../public/assets/industries/real-estate-03.jpg';
